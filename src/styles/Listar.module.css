@@ -1,0 +1,10 @@
+.container{
+    width: 50vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 10rem;
+}

@@ -4,6 +4,10 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    background: url("../imagens/marvel.jpg") no-repeat right top fixed;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 a {

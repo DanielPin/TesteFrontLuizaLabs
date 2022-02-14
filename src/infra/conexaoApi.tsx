@@ -9,12 +9,12 @@ const LIMIT: string = "10";
 const hash: string = md5(timestamp + privateKey + publicKey);
 
 
-export default function ConexaoApi(buscarNome: string, offset: string) {
+export default function ConexaoApi(buscarNome: string, offset: number) {
 
     const params = new URLSearchParams();
     buscarNome ? params.append("nameStartsWith", buscarNome) : null;
     params.append("limit", LIMIT);
-    params.append("offset", offset);
+    params.append("offset", offset.toString());
     params.append("ts", timestamp.toString());
     params.append("apikey", publicKey);
     params.append("hash", hash);
