@@ -1,0 +1,14 @@
+.pagination {
+    display: flex;
+    list-style: none;
+  }
+
+  .pagination li + li {
+      margin-left: 0.5rem;
+  }
+
+  .paginationActive {
+      background: red;
+      font-weight: bold;
+      border:none;
+  }

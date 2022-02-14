@@ -12,16 +12,21 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import ConexaoApi from "../infra/conexaoApi";
 import style from "../styles/Listar.module.css";
+import Pagination from "./Pagination";
+
+const LIMIT: number = 10;
 
 export default function Listar() {
   const [personagem, setPersonagem] = useState([{}]);
   const [buscaNome, setBuscaNome] = useState("");
   const [offset, setOffset] = useState(0);
+  const [total, setTotal] = useState(0);
 
   useEffect(() => {
     ConexaoApi(buscaNome, offset).then((response) => {
       setPersonagem(response.data.data.results),
-        setOffset(response.data.data.offset)
+        setOffset(response.data.data.offset),
+        setTotal(response.data.data.total);
     });
   }, [buscaNome, offset]);
 
@@ -69,6 +74,12 @@ export default function Listar() {
               </TableBody>
             </Table>
           </TableContainer>
+          <Pagination
+            limit={LIMIT}
+            total={total}
+            offset={offset}
+            setOffset={setOffset}
+          />
         </div>
       </div>
     </>
