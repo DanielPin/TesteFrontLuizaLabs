@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import ConexaoApi from "../infra/conexaoApi";
+import ConexaoApiPersonagem from "../infra/conexaoApiPersonagem";
 import style from "../styles/Listar.module.css";
 import Pagination from "./Pagination";
 
@@ -23,7 +23,7 @@ export default function Listar() {
   const [total, setTotal] = useState(0);
 
   useEffect(() => {
-    ConexaoApi(buscaNome, offset).then((response) => {
+    ConexaoApiPersonagem(buscaNome, offset).then((response) => {
       setPersonagem(response.data.data.results),
         setOffset(response.data.data.offset),
         setTotal(response.data.data.total);
