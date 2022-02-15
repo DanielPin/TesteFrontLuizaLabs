@@ -67,7 +67,7 @@ export default function Listar() {
                       <Link
                         href={{ pathname: `/detalhes`, query: { id: row.id } }}
                       >
-                        <VisibilityIcon sx={{cursor: 'pointer'}} />
+                        <VisibilityIcon name="olho" sx={{cursor: 'pointer'}} />
                       </Link>
                     </TableCell>
                   </TableRow>
