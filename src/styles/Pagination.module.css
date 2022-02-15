@@ -10,5 +10,12 @@
   .paginationActive {
       background: red;
       font-weight: bold;
+      border-radius: 0.5rem;
+      border:none;
+      color: #fff;
+  }
+
+  .button {
+      border-radius: 0.5rem;
       border:none;
   }

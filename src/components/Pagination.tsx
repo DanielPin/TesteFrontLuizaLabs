@@ -17,6 +17,7 @@ const Pagination = ({ limit, total, offset, setOffset }) => {
       <ul className={style.pagination}>
         <li>
           <button
+            className={style.button}
             onClick={() => onPageChange(paginaAtual - 1)}
             disabled={paginaAtual === 1}
           >
@@ -30,7 +31,7 @@ const Pagination = ({ limit, total, offset, setOffset }) => {
             <li key={page}>
               <button
                 onClick={() => onPageChange(page)}
-                className={page === paginaAtual ? style.paginationActive : ""}
+                className={page === paginaAtual ? style.paginationActive : style.button}
               >
                 {page}
               </button>
@@ -39,6 +40,7 @@ const Pagination = ({ limit, total, offset, setOffset }) => {
 
         <li>            
           <button
+            className={style.button}
             onClick={() => onPageChange(paginaAtual + 1)}
             disabled={paginaAtual === totalPaginas}
           >

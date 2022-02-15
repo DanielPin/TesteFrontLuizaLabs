@@ -34,10 +34,11 @@ export default function Listar() {
     <>
       <div className={style.container}>
         <div className={style.box}>
-          <h2>Busca</h2>
+          <h2 className={style.h2Busca}>Busca</h2>
           <input
+            className={style.inputBusca}
             type="text"
-            placeholder="busca por nome"
+            placeholder="Buscar por nome"
             value={buscaNome}
             onChange={(ev) => setBuscaNome(ev.target.value)}
           />
@@ -49,8 +50,8 @@ export default function Listar() {
             >
               <TableHead>
                 <TableRow>
-                  <TableCell align="center">Nome</TableCell>
-                  <TableCell align="center">Detalhes</TableCell>
+                  <TableCell align="center" sx={{fontWeight: 'bold'}}>Nome</TableCell>
+                  <TableCell align="center" sx={{fontWeight: 'bold'}}>Detalhes</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
@@ -66,7 +67,7 @@ export default function Listar() {
                       <Link
                         href={{ pathname: `/detalhes`, query: { id: row.id } }}
                       >
-                        <VisibilityIcon />
+                        <VisibilityIcon sx={{cursor: 'pointer'}} />
                       </Link>
                     </TableCell>
                   </TableRow>

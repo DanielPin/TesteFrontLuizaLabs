@@ -8,3 +8,22 @@
     margin: 0 auto;
     margin-top: 10rem;
 }
+
+.h2Busca {
+    color: #fff;
+    cursor: default;
+}
+
+.inputBusca{
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    margin-bottom: 0.5rem;
+}
+
+.inputBusca:focus{
+    outline: none;
+    border:1px solid red;
+    box-shadow: 0 0 10px #000000;
+    
+}
